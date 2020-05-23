@@ -1002,7 +1002,7 @@ def _note_doctag(key, document_length, docvecs):
     docvecs.count = docvecs.max_rawint + 1 + len(docvecs.offset2doctag)
 
 
-class Doc2VecVocab(FasttextVocab):
+class Doc2VecVocab(FastTextVocab):
     """Vocabulary used by :class:`~gensim.models.doc2vec.Doc2Vec`.
 
     This includes a mapping from words found in the corpus to their total frequency count.
