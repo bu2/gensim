@@ -2163,9 +2163,9 @@ class FastTextKeyedVectors(WordEmbeddingsKeyedVectors):
 
         """
         super(FastTextKeyedVectors, self).init_sims(replace)
-        if getattr(self, 'vectors_ngrams_norm', None) is None or replace:
-            logger.info("precomputing L2-norms of ngram weight vectors")
-            self.vectors_ngrams_norm = _l2_norm(self.vectors_ngrams, replace=replace)
+        # if getattr(self, 'vectors_ngrams_norm', None) is None or replace:
+        #     logger.info("precomputing L2-norms of ngram weight vectors")
+        #     self.vectors_ngrams_norm = _l2_norm(self.vectors_ngrams, replace=replace)
 
     def save_word2vec_format(self, fname, fvocab=None, binary=False, total_vec=None):
         """Store the input-hidden weight matrix in the same format used by the original
