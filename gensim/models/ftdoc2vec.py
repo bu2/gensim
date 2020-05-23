@@ -343,7 +343,7 @@ class Doc2Vec(BaseWordEmbeddingsModel):
             dm=dm, dm_concat=dm_concat, dm_tag_count=dm_tag_count,
             vector_size=self.vector_size, **trainables_kwargs)
 
-        self.wv = FastTextKeyedVectors(self.vector_size)
+        self.wv = FastTextKeyedVectors(self.vector_size, min_n=3, max_n=6, bucket=2000000, compatible_hash=True)
         self.docvecs = docvecs or Doc2VecKeyedVectors(self.vector_size, docvecs_mapfile)
 
         self.comment = comment
